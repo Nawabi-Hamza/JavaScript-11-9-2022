@@ -2,19 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        input:valid{
+            border-color: green;
+           
+        }
+        input:invalid{
+            border-color:red;
+        }
+        input + p {
+            font-family: arial;
+            text-align: center;
+            margin:0 10px;
+            color:red;
+            opacity: 0;
+            height: 0;
+
+        }
+        input.invalid + p {
+            opacity: 1;
+            height: auto;
+            margin-bottom: 20px;
+            
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                
+                    <input type="text" class="form-control my-2" pattern="[a-z]*" name="name" required placeholder="username">
+                    <p>this is invalid please try again</p>
+                    <input type="email" class="form-control my-2" name="email" placeholder="email">
+                    <p>this is invalid please try again</p>
+                    <input type="password" class="form-control my-2" name="password" placeholder="password">
+                    <p>this is invalid please try again</p>
+                    <input type="number" class="form-control my-2" name="phone" placeholder="phone">
+                    <p>this is invalid please try again</p>
+                    <input type="text" class="form-control my-2" name="sign" placeholder="profile sign">
+                    <p>this is invalid please try again</p>
+                    <button class="btn btn-warning form-control my-4">sign in</button>
+               
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
 
 
 
 
 
-
-    
 </body>
-<script src="js.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!-- <script src="js.js"></script> -->
+<script src="js1.js"></script>
 </html>
